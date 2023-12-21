@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Phylum Formation - Idées innovantes en action</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Phylum Formation - Idées innovantes en action">
+    <meta name="keywords" content="phylum formation, formation, formateur, formation de formateur, conseil pour les professionnel et particuliers">
+    <meta name="author" content="Agence Maistre web - Hervé Jacqueson">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Page loading styles -->
+    <style>
+      html{
+        --scroll-behavior: smooth;
+        scroll-behavior: smooth;
+      }
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      [data-bs-theme="dark"] .title {
+        color: #d4944a !important;
+      }
+
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-info shadow-sm navbar-sticky p-0">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3" >
+            <img src="assets/img/icone-phylum.png" width="47" alt="Phylum Formation">
+            <p class="d-none d-md-block m-0 text-primary text-uppercase fw-light" >Phylum Formation</p>
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end bg-info">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title text-light">Menu</h5>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#accueil" class="nav-link" aria-current="page">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#presentation" class="nav-link">Présentation</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Prestations</a>
+                  <ul class="dropdown-menu bg-info">
+                    <li><a href="#formateurs" class="nav-link ms-1 ms-md-0 dropdown-item">Formation de Formateurs</a></li>
+                    <li><a href="#paysager" class="nav-link ms-1 ms-md-0 dropdown-item">Formation en Aménagement Paysager</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#temoignages" class="nav-link">Témoignages</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>   
+          </div>
+          <div class="form-check form-switch mode-switch mt-md-2 pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input mt-md-1" id="theme-mode">
+            <label class="form-check-label text-light d-none d-sm-block" for="theme-mode"><i class="bx bx-sun fs-2"></i></label>            
+            <label class="form-check-label text-light d-none d-sm-block" for="theme-mode"><i class="bx bx-moon fs-2"></i></label>            
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero image -->
+      <section class="jarallax d-flex shadow-info shadow-lg d-none d-md-block pb-5" data-jarallax data-speed="0.35">
+        
+        <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary-translucent"></span>
+        <div class="jarallax-img d-flex flex-column align-items-center justify-content-center" style="background-image: url(assets/img/racines2.jpg);">
+          <div class="row d-flex align-items-start justify-content-between w-100">
+            <p class="col-6 fs-lg fw-semibold text-muted text-center mb-3" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1000">
+              <span class="h3 text-muted">Delphine Larché</span> <br>
+              Formatrice – Consultante <br>
+            </p>
+            <p class="col-6 fs-lg fw-semibold text-muted text-center" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="1000">
+              Forme - Accompagne – Conseil <br>
+              les acteurs de la formation et du paysage <br>
+            </p>
+          </div> 
+        </div>
+        <div class="d-none d-xxl-block" style="height: 700px;"></div>
+        <div class="d-none d-md-block d-xxl-none" style="height: 700px;"></div>
+      </section>
+
+      <section class="d-block bg-info pb-1 mb-1 d-md-none d-flex flex-column align-items-center">
+        <h1 class="text-primary d-none text-center">Phylum Formation</h1>
+        <img src="assets/img/logo-phylum.png" alt="Logo Phylum Formation" class="pb-2" width="200">
+        <p class="text-center text-primary">
+          Delphine Larché <br>
+          Formatrice – Consultante
+        </p>
+      </section>
+
+      <!-- Accueil (Slider) -->
+      <section class="container pt-5" id="accueil" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="1000" data-aos-once="true">
+        <div class=" row pt-md-5 align-items-end">
+          <div class="col-lg-6 d-flex flex-column">
+
+            <!-- Swiper slider -->
+            <!--  -->
+            <div class="swiper mx-0" data-swiper-options='{
+              "autoplay": true,
+              "spaceBetween": 30,
+              "loop": true,
+              "tabs": true,
+              "autoHeight": true,
+              "navigation": {
+                "prevEl": "#prev-industry",
+                "nextEl": "#next-industry"
+              }
+            }'>
+              <div class="swiper-wrapper text-center text-lg-start h-100">
+
+                <!-- Item -->
+                <div class="swiper-slide justify-content-center " data-swiper-tab="#industry-1">
+                  <h2 class="h1 d-none d-md-block mb-4 text-center text-md-start">
+                    <span class="text-primary">Formation</span> de Formateurs
+                  </h2>
+                  <h2 class="d-block d-md-none mb-4 text-center">
+                    <span class="text-primary">Formation</span> de Formateurs
+                  </h2>
+                  <p>Pour apprendre à apprendre</p>
+                  <p class="text-primary">
+                    <a href="#formateurs" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      En savoir plus
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </p>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide justify-content-center " data-swiper-tab="#industry-2">
+                  <h2 class="h1 d-none d-md-block mb-4 text-center text-md-start">
+                    <span  style="color: #0f980f;">Formation</span> en Aménagement Paysager
+                  </h2>
+                  <h2 class="d-block d-md-none mb-4 text-center">
+                    <span  style="color: #0f980f;">Formation</span> en Aménagement Paysager                </h2>
+                  <p>S'engager pour un jardin écoresponsable</p>
+                  <p class="text-primary">
+                    <a href="#paysager" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      En savoir plus
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 pt-lg-3  mb-4 mb-lg-0">
+
+            <!-- Swiper tabs (Industry images) -->
+            <div class="swiper-tabs">
+
+              <!-- Industry 1 -->
+              <div id="industry-1" class="swiper-tab active">
+                <img src="assets/img/formation-removebg-preview.png" class="rounded-3" alt="Image">
+              </div>
+
+              <!-- Industry 2 -->
+              <div id="industry-2" class="swiper-tab">
+                <img src="assets/img/amenagement-removebg-preview.png" class="rounded-3" alt="Image">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- <div class="d-flex justify-content-center pt-5 pb-1">
+          <img src="assets/img/roue.png" alt="Roue de l'apprentissage" width="400">
+        </div> -->
+      </section>
+
+      <!-- Présentation -->
+      <section class="pt-2 pt-md-5 bg-gray-200" id="presentation">
+        <div class="mt-5 pt-1 pt-md-0 container">
+          
+          <!-- Title -->
+          <div class="d-flex flex-column flex-md-row justify-content-center pt-5 pt-md-3" data-aos="fade-up">
+            <div class="h1 d-flex justify-content-center justify-content-md-end p-0">
+              <img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100">
+            </div>
+            <h2 class=" h1 title d-flex justify-content-center text-info text-center p-0">
+              Présentation
+            </h2>
+          </div>
+          
+          <!-- Heading -->
+          <h3 class="text-center text-md-start mt-5" data-aos="fade-right">
+            <span class="text-primary">Delphine </span>Larché<br>
+          </h3>
+
+          <!-- Text -->
+          <p class="text-gray-700 mb-5" style="text-align: justify;" data-aos="fade-right">
+            Formatrice experte en Aménagement Paysager depuis 20 ans, j’accompagne l’humain dans son
+            développement, son évolution et son projet de vie. Je conduis, guide et escorte les équipes
+            pédagogiques et les formateurs novices en situation de travail, depuis une dizaine d’année, à travers
+            leurs postures et gestes professionnels.
+          </p>
+          <div class="row align-items-start justify-content-between mb-7">
+            <div class="col-12 col-md-6 order-md-last">
+
+              <!-- Images -->
+              <div class="row mb-5 mb-md-0">
+                <div class="col-12 d-flex justify-content-center" data-aos="fade-left">
+                  <img src="assets/img/delphine-larché.jpg" alt="Delphine Larché - Formatrice de formateur" class="img-fluid rounded d-block align-top" width="300">
+                </div>
+              </div> <!-- / .row -->
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-5">
+
+              <!-- List -->
+              <div class="row">
+                <div class="col-12">
+
+                  <!-- Item -->
+                  <div class="d-flex" data-aos="fade-right">
+
+                    <!-- Check -->
+                      <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                    <!-- Text -->
+                    <p style="text-align: justify;">
+                      Formatrice de Formateurs, d’Enseignants et de Cadres Pédagogiques (intervention en
+                      didactique professionnelle ce titre Bac +5 de Formateur de formateurs)                    
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex" data-aos="fade-right">
+
+                    <!-- Check -->
+                      <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                    <p style="text-align: justify;">
+                      Membre de Jury pour le Titre Professionnel de Formateur Professionnel d’Adultes (pour
+                      les sessions d’examen afin de valider les parcours des apprenants) et pour le Titre de
+                      Formateurs, d’Enseignants et de Cadres Pédagogiques (validation bloc de compétence
+                      "Conseil et Accompagnement d ’Équipe et d’Organisation« )
+                    </p>
+                  </div>
+
+                </div>
+                <div class="col-12">
+
+                  <!-- Item -->
+                  <div class="d-flex" data-aos="fade-right">
+                    
+                    <!-- Check -->
+                      <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                    <!-- Text -->
+                    <p style="text-align: justify;">
+                      Conçois, anime et évalue les séquences de formation avec une pédagogie pratique,
+                      ludique et active pour les apprenants
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex" data-aos="fade-right">
+
+                    <!-- Check -->
+                      <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                    <!-- Text -->
+                    <p style="text-align: justify;">
+                      Démarche par l’analyse des pratiques professionnelles. 
+                      Approche réflexive créant un lieu de partage, 
+                      d’échange et d’écoute permettant d’apporter de solutions aux problèmes rencontrés
+                    </p>
+
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+
+            </div>
+            
+          </div> <!-- / .row -->
+          
+          <a href="assets/img/Plaquette de Présentation-1.pdf" target="_blank" class="btn btn-primary btn-lg text-wrap" data-aos="fade-right">Téléchargez ou imprimez ma plaquette</a>
+
+         
+
+        </div> <!-- / .container -->
+      </section>
+
+      <!-- Prestations -->
+      <section class="pt-5" id="formateurs">
+        <div class="pt-3 pt-md-5 container" data-aos="fade-up">
+         
+          <!-- Title -->
+          <div class="d-flex flex-column flex-md-row justify-content-center pt-5 pt-md-3 ">
+            <div class="h1 d-flex justify-content-center justify-content-md-end p-0">
+              <img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100">
+            </div>
+            <h2 class=" h1 title d-flex justify-content-center text-info text-center p-0">
+              Prestations
+            </h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+
+              <!-- Text -->
+              <p class="text-muted mb-7">
+                Je propose des prestations et des interventions de formation, d’accompagnement et de conseil
+                adaptées aux besoins de chacun et à leur exigences, pour les organismes de formation, les entreprises,
+                les associations, les collectivités territoriales et les particuliers.
+              </p>
+
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row justify-content-center">
+            
+            <div class="row my-5 justify-content-center justify-content-md-start align-items-center" data-aos="fade-right">
+              <h3 class="col-12 col-md-6 h2 text-center text-md-start order-md-2"><span class="text-primary">Formation</span> de Formateurs</h3>
+              <img src="assets/img/cible.png" class="col-12 col-md-3 order-md-1" alt="Image Vectorielle cible" style="width: 250px;">
+              
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="500">
+              
+                <!-- Card -->
+                <div class="card shadow-light-lg mb-5 mb-md-0 lift lift-lg mb-4">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #ffc000; color: black;">Former <br>dans l'action</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt1">
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingOne">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="background-color: #ffd966; color: black;">L'environnement</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionAlt1">
+                        <div class="accordion-body bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Définir le cadre
+                            institutionnel et partenarial de la
+                            formation
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                            <p>
+                              Modélisation de l’environnement de la
+                              formation (commanditaires,prescripteurs, financeurs…) 
+                              et le contexte règlementaire
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 4 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #fde498; color: black;">La pédagogie</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionAlt1">
+                        <div class="accordion-body bg-secondary pt-3">                          
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> 
+                            Définir le cadre institutionnel et partenarial de la formation
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Compréhension des méthodes, phases, modes et démarches pédagogiques 
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">           
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Analyse et conception d’une action ou séquence
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Construction et utilisation des outils pédagogiques cohérent à la situation d’apprentissage
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 7 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Construction et utilisation des outils pédagogiques cohérent à la situation d’apprentissage
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 7 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Animation de séquences de
+                              formation en utilisant
+                              l’ensemble des démarches
+                              pédagogiques et en les
+                              analysant
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 10 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingThree">
+                        <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #fff2cc; color: black;">L'évaluation</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionAlt1">
+                        <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Maîtriser les différentes
+                            fonctions de l’évaluation et les
+                            mobiliser de façon pertinente
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Les différentes techniques de l’évaluation
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 3 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Évaluation ou coévaluation des apprenants, séquences et actions de formation
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 3 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
+                
+                <!-- Card -->
+                <div class="card shadow-light-lg mb-5 mb-md-0 lift lift-lg">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #b07bd7; color: black;">Accompagner <br>au changement</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt2">
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingFour">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color: #cc99ff; color: black;">Les valeurs</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionAlt2">
+                        <div class="accordion-body bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Construire son
+                            identité professionnelle
+                          </p>
+                          <h6>Modules d'Accompagnement</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Construction de son identité professionnelle (éthique, déontologie, postures et gestes professionnels)
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 4 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Utilisation des soft skills en
+                              formation favorisant le
+                              changement et l’innovation                            
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 4 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingFive">
+                        <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background-color: #dbb7ff; color: black;">L'analyse</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionAlt2">
+                        <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Analyser sa démarche et
+                            pratique professionnelle
+                          </p>
+                          <h6>Modules d'Accompagnement</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Clarification des mutualités
+                              coopératives et l’intelligence
+                              collective                            
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 4 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Transformer des situations
+                              professionnelles en situation
+                              d’apprentissage                           
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Construction et actualisation
+                              de méthodes et outils
+                              (portefolio, IPF…)                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 10 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Développement de ses soft
+                              skills (compétences
+                              professionnelles douces)                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 4 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Analyse des pratiques
+                              professionnelles (théâtre
+                              forum, GAPP…)                         
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 10 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
+                
+                <!-- Card -->
+                <div class="card shadow-light-lg lift lift-lg">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #9cc2e5; color: black;">Conseiller <br>par l'Innovation</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt3">
+
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingSix">
+                        <button class="accordion-button rounded-top-0 shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background-color: #bbd6ee; color: black;">Ma démarche</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingSix" data-bs-parent="#accordionAlt3">
+                        <div class="accordion-body bg-secondary rounded-bottom-3 pt-3">
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Analyser les besoins du contexte                        
+                            </p>  
+                          </div>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Proposer un diagnostique de la situation                         
+                            </p>  
+                          </div>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Apporter des pistes de solution et d’amélioration                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row justify-content-center pt-2 pt-md-0" id="paysager">
+            
+            <div class="row mb-5 pt-5 justify-content-center justify-content-md-start align-items-center" data-aos="fade-right">
+              <h3 class="col-12 col-md-6 pt-5 text-center text-md-start h2 order-md-2"><span style="color: #0f980f;">Formations</span> en Aménagement Paysager
+                &amp; Environnement</h3>
+              <img src="assets/img/outils.png" class="col-12 col-md-3 pt-5 order-md-1" alt="Image Vectorielle cible" style="width: 250px;">
+              
+            </div>
+            <div class="row justify-content-center">
+
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="500">
+              
+                <!-- Card -->
+                <div class="card shadow-light-lg mb-5 mb-md-0 lift lift-lg mb-4">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #ffc000; color: black;">Former <br>dans l'action</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt4">
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="background-color: #ffd966; color: black;">
+                          L’environnement, l’écologie, la
+                          biodiversité</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseSeven" aria-labelledby="headingSeven" data-bs-parent="#accordionAlt">
+                        <div class="accordion-body bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Sensibiliser les acteurs à
+                            une gestion écoresponsable des
+                            aménagements paysagers
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                            <p>
+                              Méthodes alternatives aux traitements chimiques
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Tri sélectif des rémanents (déchets)
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 1 jour
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+
+                            <p>
+                              Utilisation raisonnée du matériel
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 1 jour
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Reconnaissance des végétaux
+                              méditerranéen et économe en
+                              eau
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Respect de la sécurité et des règles professionnelles
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 1 à 2 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Gestion de chantier dans le
+                              respect de l’environnement et
+                              de la sécurité
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Communication interprofessionnelle
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 5 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingHeight">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHeight" aria-expanded="false" aria-controls="collapseHeight" style="background-color: #fde498; color: black;">
+                          Conception écoresponsable
+                          </button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseHeight" aria-labelledby="headingHeight" data-bs-parent="#accordionAlt4">
+                        <div class="accordion-body bg-secondary pt-3">                          
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> 
+                            Concevoir un jardin dans une démarche écologique
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Fleurissement de petits espaces et massifs
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 3 jours
+                          </p>
+                          <div class="d-flex">           
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Aménagement de petits
+                              espaces avec une végétation
+                              pérenne
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 4 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Aménagement de bassins
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 4 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Aménagement de jardins
+                              thématiques (économe en eau,
+                              thérapeutique,
+                              potager/verger…)
+                            </p> 
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 4 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingNine">
+                        <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" style="background-color: #fff2cc; color: black;">
+                          Mise en œuvre de
+                          l’aménagement paysager</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseNine" aria-labelledby="headingNine" data-bs-parent="#accordionAlt4">
+                        <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Installer les
+                            composantes d’un aménagement
+                            avec une approche
+                            agroécologique dans le respect
+                            des règles professionnelles
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Mise en place de la
+                              végétalisation (plantation,
+                              modes de fixations,
+                              enherbement par semis et
+                              plaquage)
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 4 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Mise en place des
+                              infrastructures (circulations,
+                              dallages, pavages, terrasse
+                              bois, bassin…)
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 5 à 10 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h5 class="accordion-header" id="headingTen">
+                        <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" style="background-color: #ffffcc; color: black;">
+                          Interventions raisonnées de
+                          l’entretien d’un aménagement
+                          paysager</button>
+                      </h5>
+                      <div class="accordion-collapse collapse" id="collapseTen" aria-labelledby="headingTen" data-bs-parent="#accordionAlt4">
+                        <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Entretenir les espaces
+                            d’un aménagement paysager en
+                            utilisant les bonnes pratiques
+                            professionnelles
+                          </p>
+                          <h6>Modules de Formation</h6>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Taille raisonnée des végétaux
+                              d’ornement
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Taille des oliviers
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p>
+                          <div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Optimiser les gestes liés à
+                              l’activité de la taille pour
+                              limiter les risques (TMS, choix
+                              des outils, affilage…)
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 1 jour
+                          </p><div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Amélioration et protection des
+                              sols
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 1 à 3 jours
+                          </p><div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Protection biologique intégrée:
+                              Lutter contre les agents
+                              pathogènes afin de maintenir
+                              le végétal en bonne santé
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 3 à 5 jours
+                          </p><div class="d-flex">
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Maintenir en état les
+                              infrastructures d’une
+                              aménagement paysager dans
+                              la perspective de durabilité
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> 2 à 3 jours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">
+                
+                <!-- Card -->
+                <div class="card shadow-light-lg mb-5 mb-md-0 lift lift-lg">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #b07bd7; color: black;">Accompagner <br>au changement</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt5">
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingEleven">
+                        <button class="accordion-button shadow rounded-0 collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" style="background-color: #cc99ff; color: black;">L’environnement, l’écologie, la
+                          biodiversité</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseEleven" aria-labelledby="headingEleven" data-bs-parent="#accordionAlt5">
+                        <div class="accordion-body bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Mettre en place une
+                            démarche écoresponsable d’un
+                            aménagement paysager
+                          </p>
+                          <h6>Module d'Accompagnement</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Gestion différenciée des sites                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingTwelve">
+                        <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" style="background-color: #dbb7ff; color: black;">Conduite de projet</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseTwelve" aria-labelledby="headingTwelve" data-bs-parent="#accordionAlt5">
+                        <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                          <p>
+                            <span class="fw-semibold text-dark">Objectif :</span> Conduire des projets
+                            écologiques en favorisant la
+                            biodiversité et les équilibres
+                            naturels d’un site
+                          </p>
+                          <h6>Modules d'Accompagnement</h6>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Jardin économe en eau                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Jardin de soins                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Jardin partagé                         
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Jardin des sens                          
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Jardin alimentaire (potager et verger)                       
+                            </p>  
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header" id="headingThirty">
+                          <button class="accordion-button shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty" style="background-color: #ead5ff; color: black;">Suivi de projet</button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="collapseThirty" aria-labelledby="headingThirty" data-bs-parent="#accordionAlt5">
+                          <div class="accordion-body rounded-bottom-3 bg-secondary pt-3">
+                            <p>
+                              <span class="fw-semibold text-dark">Objectif :</span> Maintenir des
+                              continuités écologiques en
+                              favorisant la biodiversité et les
+                              équilibres naturels d’un site
+                            </p>
+                            <h6>Modules d'Accompagnement'</h6>
+                            <div class="d-flex">
+                              <!-- Check -->
+                              <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                              <p>
+                                Entretien raisonné des
+                                différents espaces d’un
+                                aménagement                           
+                              </p>  
+                            </div>
+                            <p class="ps-4 ms-1">
+                              <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                            </p>
+                            <div class="d-flex">
+                              <!-- Check -->
+                              <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                              <p>
+                                Utilisation raisonnée du matériel                           
+                              </p>  
+                            </div>
+                            <p class="ps-4 ms-1">
+                              <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+
+              <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                
+                <!-- Card -->
+                <div class="card shadow-light-lg lift lift-lg">
+                  <h4 class="text-center mb-0 pb-3 border-top border-primary border-5 rounded-top-3 shadow" style="background-color: #9cc2e5; color: black;">Conseiller <br>par l'Innovation</h4>
+                  <!-- Accordion -->
+                  <div class="accordion card-body p-0" id="accordionAlt6">
+
+                    <!-- Item -->
+                    <div class="accordion-item border-0 shadow-sm">
+                      <h3 class="accordion-header" id="headingFourty">
+                        <button class="accordion-button rounded-top-0 shadow collapsed fs-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourty" aria-expanded="false" aria-controls="collapseFourty" style="background-color: #bbd6ee; color: black;">Ma démarche</button>
+                      </h3>
+                      <div class="accordion-collapse collapse" id="collapseFourty" aria-labelledby="headingFourty" data-bs-parent="#accordionAlt6">
+                        <div class="accordion-body bg-secondary rounded-bottom-3 pt-3">
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Analyser les besoins du contexte                        
+                            </p>  
+                          </div>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Proposer un diagnostique de la situation                         
+                            </p>  
+                          </div>
+                          <div class="d-flex">
+                            <!-- Check -->
+                            <i class="bx bx-leaf bx-flip-horizontal text-primary lead ps-1"></i>
+                            <p>
+                              Apporter des pistes de solution et d’amélioration                          
+                            </p>
+                          </div>
+                          <p class="ps-4 ms-1">
+                            <span class="fw-semibold text-dark">Durée :</span> En fonction des besoins
+                          </p>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- / .row -->
+      
+        </div> <!-- / .container -->
+      </section>
+
+      <!-- Témoignages -->
+      <div class="pt-5" id="temoignages">
+        <div class=" pt-5">
+
+          <!-- Title -->
+          <div class="d-flex flex-column flex-md-row justify-content-center pt-3 " data-aos="fade-up">
+            <div class="h1 d-flex justify-content-center justify-content-md-end p-0">
+              <img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100">
+            </div>
+            <h2 class=" h1 title d-flex justify-content-center text-info text-center p-0">
+              Témoignages
+            </h2>
+          </div>
+
+          <div class="px-2 px-sm-0">
+            <div class="swiper" data-swiper-options='{
+              "slidesPerView": 1,
+              "centeredSlides": true,
+              "spaceBetween": 8,
+              "loop": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "breakpoints": {
+                "500": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 24
+                },
+                "1000": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 24
+                },
+                "1500": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 24
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">En formation travaux et aménagement paysager en
+                          2020.
+                          <br>
+                          Delphine dans une dynamique de bienveillance et de
+                          respect mutuel, a su me retransmettre, par sa
+                          pédagogie rythmée, ludique, concise et accessible
+                          une méthodologie, un savoir faire et un savoir être,
+                          ainsi qu’un vocabulaire technique qui me permet
+                          aujourd'hui de travailler depuis 2 ans aux services
+                          techniques d’une mairie.
+                          <br>
+                          Dyslexique, ces cours rythmés par des phrases
+                          courtes, alliant essentiel, sens et précision sont parmi
+                          les seuls que je garde en mémoire 3 ans après.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/nathalie-leclere.png" width="80" class="rounded-circle" alt="Nathalie Leclere">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Nathalie Leclere</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">Delphine est une formatrice rare, humaine par sa
+                          patience et son attention tant elle tient à cœur la
+                          réussite de ceux qu'elle forme.
+                          <br>
+                          Nous n'avons pas eu à faire simplement un
+                          "enseignant" qui déballe des cours purement
+                          théoriques mais une formatrice avec une expérience
+                          confirmée qui a compris l'importance d'illustrer sa
+                          formation par des supports adaptés et de la pratique
+                          sur le terrain.
+                          <br>
+                          La formation par Delphine m'a apporté plus de
+                          sensibilité dans les notions indispensables pour
+                          devenir paysagiste.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/julien-menard.png" width="80" class="rounded-circle" alt="Julien Menard">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Julien Menard</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">J’ai effectué une formation diplômante en
+                          aménagement paysager en 2019/2020. Durant cette
+                          formation j’ai eu la chance d’avoir de super
+                          formateurs/formatrices dont une en particulier
+                          Delphine Larché.
+                          <br>
+                          Apprendre avec Delphine a été un privilège que se
+                          soit sur de la théorie ou de la pratique. Un langage
+                          simple et adapté à tout le monde.
+                          <br>
+                          Des mots qui résonnent encore aujourd’hui, en cas
+                          de doute, parce que répétés sans cesse. Delphine
+                          n’hésite pas à réexpliquer jusqu’à ce que la personne
+                          comprenne ce qui doit être fait ou compris. Une
+                          écoute et le sens du relationnel.
+                          <br>
+                          Pour finir une super formatrice qui sait donner l’envie
+                          aux gens d’avancer et qui serait super pour former
+                          d’autres personnes comme elle. Merci Delphine.</p>
+                      </blockquote>                
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/valerie-alliaud.png" width="80" class="rounded-circle" alt="Valérie Alliaud">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Valérie Alliaud</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">Technicienne territoriale sur la ville d’Avignon, en
+                          formation « l’utilisation, la plantation et l’entretien
+                          des plantes vivaces » en avril 2021.
+                          <br>
+                          Le déroulé de cette formation, théorique mais aussi
+                          pratique m’a permis de perfectionner ma pratique
+                          professionnelle et les échanges avec la formatrice,
+                          Delphine Larché, ont eu comme effet immédiat de
+                          pouvoir être force de proposition au sein du service
+                          fleurissement dans lequel j’exerçais mon activité.
+                          <br>
+                          Sa manière de mener cette formation, dynamique,
+                          pro-active et professionnelle a rendu cette dernière
+                          particulièrement passionnante et profitable.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/nadine-verchiere.png" width="80" class="rounded-circle" alt="Nadine Verchière">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Nadine Verchière</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">J'ai beaucoup appris avec Delphine lors de ma
+                          formation en BPA Travaux d’Aménagement
+                          Paysager en 2010/2011.
+                          <br>
+                          Elle est toujours à l'écoute, avenante et recherche
+                          le meilleur de chacun.
+                          <br>
+                          Je mets régulièrement en application ses méthodes
+                          dans les métiers que j'exerce.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/pascal-curet.png" width="80" class="rounded-circle" alt="Pascal Curet">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Pascal Curet</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">Lors de ma formation en BPA JEV en 2003/2004,
+                          j'ai rencontré une formatrice, Delphine, qui nous
+                          parlait de son métier avec une véritable passion.
+                          <br>
+                          Ta pédagogie m'a conquis. L'apprentissage dans la
+                          bonne humeur mais toujours dans la rigueur des
+                          règles de l'art.
+                          <br>
+                          Tes compétences m'ont accompagnées et soutenues
+                          dans ce beau métier du paysage et je t'en
+                          remercierai jamais assez.</p>
+                      </blockquote>                  
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/jean-claude-mazzei.png" width="80" class="rounded-circle" alt="Jean-Claude Mazzei">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Jean-Claude Mazzei</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">En reconversion professionnelle durant l’année
+                          2010/2011, Delphine a été une formatrice
+                          inoubliable.
+                          <br>
+                          Passionnée par son travail, on ressent en elle le
+                          plaisir de transmettre ses connaissances.
+                          <br>
+                          Grace à ce qu’elle m’a apporté, j’ai pu intégrer une
+                          entreprise de création et entretien d’espaces
+                          paysagers.
+                          <br>
+                          Depuis, j’ai bifurqué dans la fonction publique
+                          territoriale où je suis actuellement responsable d’
+                          équipe dans l’entretien d’espaces naturels pour la
+                          communauté de commune des pays de Sorgues
+                          Monts Ventoux.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/cedric-blanc.png" width="80" class="rounded-circle" alt="Cédric Blanc">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Cédric Blanc</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4" data-aos="fade-up" data-aos-duration="2000">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0">
+                    <div class="card bg-light h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0 fs-sm">Chef de secteur création sur la ville d’Avignon,
+                          Delphine a su transmettre ses connaissances
+                          théoriques et pratiques par sa maitrise totale sur la
+                          thématique du fleurissement des collectivités
+                          territoriales, en ce qui me concerne.
+                          <br>
+                          La formation a été progressive et participative, ce
+                          qui permet de mieux assimiler.
+                          <br>
+                          Les explications étaient claires et les échanges sur les
+                          retours d’expériences entre les stagiaires (agents des
+                          collectivités) et Delphine très instructifs. Tout ça
+                          dans un climat convivial.
+                          <br>
+                          Cette formation m’a permis d’approfondir et de
+                          compléter mes connaissances en fleurissement et de
+                          mettre en pratique mes nouvelles compétences.</p>
+                      </blockquote>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/jean-christophe-volt.png" width="80" class="rounded-circle" alt="Jean-Christophe Volt">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Jean-Christophe Volt</h6>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5"></div>
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <!-- Contact form -->
+      <section class="position-relative py-5" id="contact" data-aos="fade-up" data-aos-duration="2000">
+        <div class="container position-relative zindex-5 pt-5">
+
+          <!-- Title -->
+          <div class="d-flex flex-column flex-md-row justify-content-center pt-3 ">
+            <div class="h1 d-flex justify-content-center justify-content-md-end p-0">
+              <img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100">
+            </div>
+            <h2 class=" h1 title d-flex justify-content-center text-info text-center p-0">
+              Contactez-moi !
+            </h2>
+          </div>
+
+          <div class="row justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11">
+              <p class="text-muted mb-0">J’interviens toujours en intra, dans vos locaux ou lieux spécifique de votre choix</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <form class="row needs-validation" novalidate>
+
+                <div class="col-12 mb-4">
+                  <label for="people" class="form-label">Vous êtes ?</label>
+                  <select id="people" class="form-select">
+                    <option value="Un organisme de formation">Un organisme de formation</option>
+                    <option value="Une collectivité territoriale">Une collectivité territoriale</option>
+                    <option value="Une association">Une association</option>
+                    <option value="Un particulier">Un particulier</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-6 mb-4">
+                  <label for="fn" class="form-label">Vos Nom et Prénom</label>
+                  <input type="text" id="fn" class="form-control" required>
+                  <div class="invalid-feedback">Veuillez entrer vos nom et prénom.</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="email" class="form-label">Votre Adresse Mail</label>
+                  <input type="email" id="email" class="form-control" required>
+                  <div class="invalid-feedback">Veuillez entrer une adresse mail.</div>
+                </div>
+                
+                <div class="col-12 mb-4">
+                  <label for="message" class="form-label">Votre Message</label>
+                  <textarea id="message" class="form-control" rows="4" required></textarea>
+                  <div class="invalid-feedback">Veuillez entrer votre message.</div>
+                </div>
+                <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
+                  <button type="submit" class="btn btn-primary shadow-primary btn-lg">Envoyer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- BG shape -->
+        <div class="position-absolute end-0 bottom-0 text-primary">
+          <svg width="469" height="343" viewBox="0 0 469 343" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M273.631 680.872C442.436 768.853 639.315 708.216 717.593 558.212C795.871 408.208 732.941 212.157 564.137 124.176C395.333 36.195 198.453 96.8326 120.175 246.836C41.8972 396.84 104.827 592.891 273.631 680.872ZM236.335 752.344C440.804 858.914 688.289 788.686 789.109 595.486C889.928 402.286 805.903 159.274 601.433 52.7043C396.964 -53.8654 149.479 16.3623 48.6595 209.562C-52.1598 402.762 31.8652 645.774 236.335 752.344Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M298.401 633.404C434.98 704.59 598.31 656.971 664.332 530.451C730.355 403.932 675.946 242.827 539.367 171.642C402.787 100.457 239.458 148.076 173.435 274.595C107.413 401.114 161.822 562.219 298.401 633.404ZM288.455 652.464C434.545 728.606 611.369 678.429 683.403 540.391C755.437 402.353 695.402 228.725 549.312 152.583C403.222 76.4404 226.398 126.617 154.365 264.655C82.331 402.693 142.365 576.321 288.455 652.464Z" fill="currentColor"/></svg>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="pt-5 pb-5 border-top border-light bg-info">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-12 col-md-4 col-lg-3 d-flex flex-column justify-content-center align-items-center align-items-md-start">
+            <img src="assets/img/logo-phylum.png" alt="Logo Phylum Formation" class="pb-2" width="200">
+            <!-- Social -->
+            <div class="d-flex flex-column flex-md-row">
+              <div class="nav flex-column align-items-center align-items-md-start">
+                <a href="https://www.linkedin.com/company/phylum-formation" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" aria-label="LinkedIn Link">
+                  <i class="bx bxl-linkedin-square align-middle fs-3"></i> 
+                </a>
+              </div>
+            </div>
+            
+            <!-- <ul class="list-unstyled list-inline list-social mb-5 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="icone instagram Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/linkedin.svg" class="list-social-icon" alt="icone linkedin Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="icone twitter Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+            </ul> -->
+          </div>
+          <div
+            class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"
+          >
+            <div id="footer-links" class="row">
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#friends-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Liens utiles &amp; amis</a
+                  >
+                </h6>
+                <div
+                  id="friends-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  <ul class="nav navLink flex-column text-center text-md-start mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <p class="d-none d-md-block px-0 pt-1 pb-2 m-0 text-light fw-bold"
+                        >Liens utiles &amp; amis :</p
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://gitemurabeille.com/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Gîte d'Étape le Mur d'Abeilles</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://axium-sante.com/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Axium Santé</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://fbi26.fr" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        > FBi26 - SAV Informatique</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#menu-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Menu</a
+                  >
+                </h6>
+                <div
+                  id="menu-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  <ul class="nav navLink flex-column text-center text-md-start pb-lg-1 mb-lg-3">
+                    <li class="nav-item">
+                      <a href="#accueil" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Accueil</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#presentation" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Présentation</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#formateurs" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Prestations</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#temoignages" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Témoignages</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#contact" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Contact</a
+                      >
+                    </li>
+                  </ul>   
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#policy-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Conditions et Politique</a
+                  >
+                </h6>
+                <div
+                  id="policy-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  
+                  <ul class="nav navLink flex-column text-center text-md-start mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="cgu.html" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Conditions d'utilisation</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="rgpd.html" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Informations RGPD</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>  
+              <div class="col-lg-3 pt-2 pt-lg-0">
+                <div class="pt-2">
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="javascript:openAxeptioCookies()" class="nav-link d-inline-block px-0 pt-1 pb-2">Gestion des cookies</a>
+                  </div>
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="mailto:delphinelarche01@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                      delphinelarche01@gmail.com
+                    </a>
+                  </div>
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="tel:0688171360" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                      06.88.17.13.60 
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- Fermeture de la toogle bar -->    
+    <script>
+      // Fonction pour fermer la barre de navigation Bootstrap
+      function closeNavbar() {
+          // Vérifiez si la fenêtre a une largeur supérieure à 768px (mode mobile)
+          if (window.innerWidth <= 768) {
+              // Trouver le bouton de bascule et le cliquer pour fermer la barre
+              var toggleButton = document.querySelector(".navbar-toggler");
+              if (toggleButton) {
+                  toggleButton.click();
+              }
+          }
+      }
+
+      // Attachez un gestionnaire de clic à tous les liens du menu
+      var menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+      menuLinks.forEach(function(link) {
+          link.addEventListener("click", function(event) {
+              // Empêchez le comportement par défaut du lien
+              event.preventDefault();
+
+              // Récupérez l'attribut href du lien pour obtenir l'ID de la section cible
+              var sectionId = this.getAttribute("href").slice(1); // Supprimez le caractère "#" au début
+              var targetSection = document.getElementById(sectionId);
+
+              // Assurez-vous que la section cible existe
+              if (targetSection) {
+                  // Faites défiler jusqu'à la section cible
+                  targetSection.scrollIntoView({
+                      behavior: "smooth" // Animation de défilement fluide
+                  });
+
+                  // Attendez que le défilement soit terminé, puis fermez la barre de navigation
+                  setTimeout(function() {
+                      closeNavbar();
+                  }, 400); // Vous pouvez ajuster la durée du délai selon vos besoins
+              }
+          });
+      });
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Axceptio -->
+    <script>
+      window.axeptioSettings = {
+        clientId: "657d76a690c2792a2905ebdb",
+        cookiesVersion: "phylum-formation-fr",
+      };
+       
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+    </script>
+
+  </body>
+</html>
