@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <title>Phylum Formation - Idées innovantes en action</title>
@@ -31,6 +31,9 @@
 
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Page loading styles -->
     <style>
@@ -119,7 +122,14 @@
       }
     </style>
 
-    <!-- Page loading scripts -->
+    <!-- Page loading & EmailJS scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('');
+        })();
+    </script>
     <script>
       (function () {
         window.onload = function () {
@@ -128,6 +138,19 @@
           setTimeout(function () {
             preloader.remove();
           }, 1000);
+          var form = document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('', '', this)
+              .then(function() {
+                console.log('SUCCESS!');
+                  alert("Votre message a bien été envoyé !")
+                }, function(error) {
+                  console.log('FAILED...', error);
+              });
+          });
         };
       })();
     </script>
@@ -136,7 +159,7 @@
 
   <!-- Body -->
   <body>
-
+    
     <!-- Page loading spinner -->
     <div class="page-loading active">
       <div class="page-loading-inner">
@@ -155,9 +178,10 @@
       <!-- BG dark version -->
       <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100 bg-repeat-0 bg-position-center bg-size-cover" style="background-image: url(assets/img/404/dark/bg.jpg);"></div>
 
+
       <!-- Navbar -->
       <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
-      <!-- <header class="header navbar navbar-expand-lg fixed-top">
+      <header class="header navbar navbar-expand-lg fixed-top">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/logo.svg" width="47" alt="Silicon">
@@ -174,32 +198,25 @@
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Landings</a>
                   <div class="dropdown-menu p-0">
                     <div class="d-lg-flex">
-                      <div class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0" style="margin: -1px; background-color: #f3f6ff;">
-                        <img src="assets/img/landings.jpg" alt="Landings">
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 15rem;">
+                      <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0" style="background-image: url(assets/img/landings.jpg); margin: -1px;"></div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
                         <ul class="list-unstyled mb-0">
                           <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
                           <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
                           <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
-                          <li><a href="landing-mobile-app-showcase-v3.html" class="dropdown-item">Mobile App Showcase v.3<span class="badge bg-success ms-2">New</span></a></li>
-                          <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing</a></li>
+                          <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing<span class="badge bg-success ms-2">New</span></a></li>
+                          <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
                           <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
                           <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
                           <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
-                          <li><a href="landing-saas-v4.html" class="dropdown-item">SaaS v.4</a></li>
-                          <li><a href="landing-saas-v5.html" class="dropdown-item">SaaS v.5<span class="badge bg-success ms-2">New</span></a></li>
                         </ul>
                       </div>
                       <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
                         <ul class="list-unstyled mb-0">
-                          <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
                           <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
                           <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
                           <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
-                          <li><a href="landing-software-dev-agency-v1.html" class="dropdown-item">Software Dev Agency v.1</a></li>
-                          <li><a href="landing-software-dev-agency-v2.html" class="dropdown-item">Software Dev Agency v.2</a></li>
-                          <li><a href="landing-software-dev-agency-v3.html" class="dropdown-item">Software Dev Agency v.3</a></li>
+                          <li><a href="landing-software-company.html" class="dropdown-item">IT (Software) Company</a></li>
                           <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
                           <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
                           <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
@@ -310,7 +327,7 @@
             &nbsp;Buy now
           </a>
         </div>
-      </header> -->
+      </header>
 
 
       <!-- Page content -->
@@ -345,23 +362,25 @@
 
           <h1 class="visually-hidden">404</h1>
           <h2 class="display-5">Ooops!</h2>
-          <p class="fs-xl pb-3 pb-md-0 mb-md-5">La page que vous cherchez n,'est pas disponible'.</p>
+          <p class="fs-xl pb-3 pb-md-0 mb-md-5">The page you are looking for is not available.</p>
           <a href="index.html" class="btn btn-lg btn-primary shadow-primary w-sm-auto w-100">
             <i class="bx bx-home-alt me-2 ms-n1 lead"></i>
-            Retourner sur la page d'Accueil de Phylum-formation.fr
+            Go to homepage
           </a>
         </div>
 
-        <!-- <div class="text-center py-lg-5 py-4 mt-auto">
+        <div class="text-center py-lg-5 py-4 mt-auto">
           <p class="nav d-block fs-sm pt-3 pt-lg-0 mb-0">
             <span class="opacity-75">&copy; All rights reserved. Made by</span> 
             <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
           </p>
-        </div>   -->
+        </div>  
       </section>
     </main>
 
     <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
 
     <!-- Main Theme Script -->

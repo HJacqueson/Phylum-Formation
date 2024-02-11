@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="fr" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <title>Phylum Formation - Idées innovantes en action</title>
@@ -127,7 +127,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('');
+            emailjs.init('2T9yoCckEjwLHMSrG');
         })();
     </script>
     <script>
@@ -143,7 +143,7 @@
             // generate a five digit number for the contact_number variable
             this.contact_number.value = Math.random() * 100000 | 0;
             // these IDs from the previous steps
-            emailjs.sendForm('', '', this)
+            emailjs.sendForm('service_lctl9t9', 'template_lw3tf78', this)
               .then(function() {
                 console.log('SUCCESS!');
                   alert("Votre message a bien été envoyé !")
@@ -1313,7 +1313,7 @@
           <!-- Title -->
           <div class="d-flex flex-column flex-md-row justify-content-center pt-3 " data-aos="fade-up">
             <div class="h1 d-flex justify-content-center justify-content-md-end p-0">
-              <img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100">
+              <a href="https://www.youtube.com/watch?v=Fpu5a0Bl8eY&ab_channel=NENA" target="_blank"><img src="assets/img/logo-fleur-nobg.png" alt="logo fleur" width="100"></a>
             </div>
             <h2 class=" h1 title d-flex justify-content-center text-info text-center p-0">
               Témoignages
@@ -1641,12 +1641,13 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
-              <form class="row needs-validation" id="contact-form">
-
+              <form class="row needs-validation" novalidate id="contact-form">
+                <input type="hidden" name="contact_number">
                 <div class="col-12 mb-4">
                   <label for="people" class="form-label">Vous êtes ?</label>
                   <select id="people" class="form-select" name="user-people">
                     <option value="Un organisme de formation">Un organisme de formation</option>
+                    <option value="Une entreprise">Une entreprise</option>
                     <option value="Une collectivité territoriale">Une collectivité territoriale</option>
                     <option value="Une association">Une association</option>
                     <option value="Un particulier">Un particulier</option>
