@@ -122,7 +122,14 @@
       }
     </style>
 
-    <!-- Page loading scripts -->
+    <!-- Page loading & EmailJS scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('');
+        })();
+    </script>
     <script>
       (function () {
         window.onload = function () {
@@ -131,6 +138,19 @@
           setTimeout(function () {
             preloader.remove();
           }, 1000);
+          var form = document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('', '', this)
+              .then(function() {
+                console.log('SUCCESS!');
+                  alert("Votre message a bien été envoyé !")
+                }, function(error) {
+                  console.log('FAILED...', error);
+              });
+          });
         };
       })();
     </script>
@@ -302,12 +322,12 @@
 
               <!-- Industry 1 -->
               <div id="industry-1" class="swiper-tab active">
-                <img src="assets/img/formation-removebg-preview.png" class="rounded-3" alt="Image">
+                <img src="assets/img/formation-de-formateurs_accueil.png" style="max-height: 424px;" class="rounded-3" alt="Image">
               </div>
 
               <!-- Industry 2 -->
               <div id="industry-2" class="swiper-tab">
-                <img src="assets/img/amenagement-removebg-preview.png" class="rounded-3" alt="Image">
+                <img src="assets/img/amenagement-paysager_accueil.png" class="rounded-3" alt="Image">
               </div>
               
             </div>
@@ -463,7 +483,7 @@
             
             <div class="row my-5 justify-content-center justify-content-md-start align-items-center" data-aos="fade-right">
               <h3 class="col-12 col-md-6 h2 text-center text-md-start order-md-2"><span class="text-primary">Formation</span> de Formateurs</h3>
-              <img src="assets/img/cible.png" class="col-12 col-md-3 order-md-1" alt="Image Vectorielle cible" style="width: 250px;">
+              <img src="assets/img/formation-de-formateurs_presta.png" class="col-12 col-md-3 order-md-1" alt="Image Vectorielle cible" style="width: 250px;">
               
             </div>
             <div class="row justify-content-center">
@@ -788,7 +808,7 @@
             <div class="row mb-5 pt-5 justify-content-center justify-content-md-start align-items-center" data-aos="fade-right">
               <h3 class="col-12 col-md-6 pt-5 text-center text-md-start h2 order-md-2"><span style="color: #0f980f;">Formations</span> en Aménagement Paysager
                 &amp; Environnement</h3>
-              <img src="assets/img/outils.png" class="col-12 col-md-3 pt-5 order-md-1" alt="Image Vectorielle cible" style="width: 250px;">
+              <img src="assets/img/amenagement-paysager_presta.png" class="col-12 col-md-3 pt-5 order-md-1" alt="Image Vectorielle de personnes progressant dans leur apprentissage, en escaladant des livres géants" style="width: 250px;">
               
             </div>
             <div class="row justify-content-center">
@@ -1621,11 +1641,11 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
-              <form class="row needs-validation" novalidate>
+              <form class="row needs-validation" id="contact-form">
 
                 <div class="col-12 mb-4">
                   <label for="people" class="form-label">Vous êtes ?</label>
-                  <select id="people" class="form-select">
+                  <select id="people" class="form-select" name="user-people">
                     <option value="Un organisme de formation">Un organisme de formation</option>
                     <option value="Une collectivité territoriale">Une collectivité territoriale</option>
                     <option value="Une association">Une association</option>
@@ -1635,18 +1655,18 @@
 
                 <div class="col-sm-6 mb-4">
                   <label for="fn" class="form-label">Vos Nom et Prénom</label>
-                  <input type="text" id="fn" class="form-control" required>
+                  <input type="text" id="fn" class="form-control" name="user-name" required>
                   <div class="invalid-feedback">Veuillez entrer vos nom et prénom.</div>
                 </div>
                 <div class="col-sm-6 mb-4">
                   <label for="email" class="form-label">Votre Adresse Mail</label>
-                  <input type="email" id="email" class="form-control" required>
+                  <input type="email" id="email" class="form-control" name="user-mail" required>
                   <div class="invalid-feedback">Veuillez entrer une adresse mail.</div>
                 </div>
                 
                 <div class="col-12 mb-4">
                   <label for="message" class="form-label">Votre Message</label>
-                  <textarea id="message" class="form-control" rows="4" required></textarea>
+                  <textarea id="message" class="form-control" rows="4" name="user-message" required></textarea>
                   <div class="invalid-feedback">Veuillez entrer votre message.</div>
                 </div>
                 <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
@@ -1914,6 +1934,5 @@
         t.parentNode.insertBefore(e, t);
       })(document, "script");
     </script>
-
   </body>
 </html>
